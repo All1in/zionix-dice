@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Dice Game
 
-## Getting Started
+This project is a simple Dice game developed using TypeScript, Next.js, and Material UI. The game allows users to input a threshold number and choose whether the result of the dice roll should be greater or less than the specified threshold. Users can play the game, see the result, and view the history of their games.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+**Threshold Input:** Users can enter a number that serves as a threshold.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Condition Selection:** Users can choose whether the dice result should be "Greater" or "Less" than the threshold.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**Play Button:** Clicking the "Play" button generates a random number between 1 and 100 and evaluates whether it meets the specified condition.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+**Result Display:** If the result meets the condition, a success message or icon is displayed.
 
-## Learn More
+**Game History:** The results of the last 10 games are stored and displayed as a history list.
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Technologies Used
 
-## Deploy on Vercel
+_**TypeScript:**_ For type safety and better development experience.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**_Next.js:_** For server-side rendering and building the React application.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+**_Material UI:_** For component library and styling the user interface.
+
+
+## Usage
+
+`Enter a Threshold: `Input a number in the threshold field.
+
+`Select Condition:` Choose whether the dice roll should be greater or less than the threshold.
+
+`Play:` Click the "Play" button to roll the dice.
+
+`View Result:` The result will be displayed, showing whether it meets the specified condition. A success message or icon will be shown accordingly.
+
+`Check History:` View the last 10 game results in the history list.
+
+## Installation
+
+To get started with this project, follow these steps:
+
+1. Clone the repository:
+`git clone https://github.com/yourusername/dice-game.git`
+2. Install dependencies: `npm install`
+3. Run the development server: `npm run dev`
+4. Open your browser and go to `http://localhost:3000` to see the application in action.
+
+
+## **Contact**
+
+If you have any questions or comments, please contact **[All1In](bm3023068@gmail.com)**.
