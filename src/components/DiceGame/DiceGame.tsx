@@ -25,8 +25,6 @@ const DiceGame = () => {
     const [history, setHistory] = useState<HistoryEntry[]>([]);
     const [isWin, setIsWin] = useState<NullableBoolean>(null);
 
-    console.log(history)
-
     const handlePlay = () => {
         const diceRoll = Math.floor(Math.random() * 100) + 1;
         const win = (choice === 'Over' && diceRoll > threshold) || (choice === 'Under' && diceRoll < threshold);
@@ -40,23 +38,21 @@ const DiceGame = () => {
     };
 
     const CustomRadio = styled(Radio)(({ theme }) => ({
-        color: purple[500], // Фіолетовий колір для незаповненої Radio кнопки
+        color: purple[500],
         '&.Mui-checked': {
-            color: purple[700], // Темніший фіолетовий для заповненої Radio кнопки
+            color: purple[700],
         },
     }));
 
-// Кастомний стиль для FormControlLabel
     const CustomFormControlLabel = styled(FormControlLabel)(({ theme }) => ({
         '& .MuiTypography-root': {
-            color: purple[700], // Фіолетовий колір для тексту мітки
+            color: purple[700],
         },
     }));
-
 
 
     return (
-        <Box sx={{ padding: 2 }}>
+        <Box sx={{ padding: 2, width: '50%', margin: '0 auto' }}>
             <Typography variant="h5" sx={{ mb: 2 }}>Dice</Typography>
 
             {isWin !== null && (
@@ -74,8 +70,6 @@ const DiceGame = () => {
                     onChange={(e) => setChoice(e.target.value as 'Over' | 'Under')}
                     sx={{ justifyContent: 'center', mb: 3 }}
                 >
-                    {/*<FormControlLabel value="Under" control={<Radio />} label="Under" />*/}
-                    {/*<FormControlLabel value="Over" control={<Radio />} label="Over" />*/}
                     <CustomFormControlLabel
                         value="Under"
                         control={<CustomRadio />}
@@ -87,25 +81,19 @@ const DiceGame = () => {
                         label="Over"
                     />
                 </RadioGroup>
-                {/*<Slider*/}
-                {/*    value={threshold}*/}
-                {/*    valueLabelDisplay="auto"*/}
-                {/*    onChange={(e, value) => setThreshold(value as number)}*/}
-                {/*    min={0}*/}
-                {/*    max={100}*/}
-                {/*    sx={{ mb: 3 }}*/}
-                {/*/>*/}
                 <ThresholdSlider threshold={threshold} setThreshold={setThreshold} />
                 <Button
                     variant="contained"
                     onClick={handlePlay}
-                    fullWidth
                     sx={{
                         backgroundColor: 'purple',
                         color: 'white',
                         '&:hover': {
                             backgroundColor: 'darkviolet',
                         },
+                        margin: '0 auto',
+                        display: 'block',
+                        width: '50%'
                     }}
                 >
                     PLAY

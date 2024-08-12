@@ -35,7 +35,7 @@ const GameHistory: React.FC<{ history: HistoryEntry[] }> = ({ history }) => {
                 {gameEntries.map((entry, index) => (
                     <Grid container spacing={2} key={index}>
                         <Grid item xs={4}>
-                            <Typography>{entry.time}</Typography>
+                            <Typography sx={{ marginLeft: '20px' }}>{entry.time}</Typography>
                         </Grid>
                         <Grid item xs={4}>
                             <Typography>{entry.guess}</Typography>
